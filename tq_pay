@@ -1,0 +1,20 @@
+<script> 
+//This page was created to allow facebook pixel to detect completion of the form because zoho forms doesn't allow fbpixel tracking on its buttons. 
+//so here we redirect to the right page taking all the query paraments as well.
+
+// Get parameters from the current URL
+    let url = window.location.href;
+ //create an anchor tag to use the property called search
+    let anchor = document.createElement('a');
+ //assigning url to href of anchor tag
+    anchor.href = url;
+ //search property returns the query string of url
+    let queryStrings = anchor.search.substring(1);
+  //Source of the destination 
+  let destination = "https://package.yournextu.com/payment_2c2p.php"
+//alert( destination + "?" + queryStrings );
+setTimeout("window.location.href = destination + '?' + queryStrings", 3000);
+
+//window.location.href=destination;
+
+</script>

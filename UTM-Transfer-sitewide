@@ -1,0 +1,17 @@
+<script type="text/javascript">
+//keep pushing the url parameters to the next page.
+jQuery(document).ready(function ($) {
+	$(function() {
+		$url = window.location.href;
+		$urlSplit = $url.split("?");
+		$url_parameters = $urlSplit[1];
+
+		$("a").attr('href', function(i, h) {
+			
+			if( typeof $url_parameters !== "undefined") return h + "?" + $url_parameters;
+			else return h;
+			
+		});
+	});
+});
+</script>
